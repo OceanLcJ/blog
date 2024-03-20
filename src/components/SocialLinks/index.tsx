@@ -9,8 +9,8 @@ export type Social = {
   // twitter?: string
   juejin?: string
   csdn?: string
-  qq?: string
-  wx?: string
+  // qq?: string
+  // wx?: string
   cloudmusic?: string
   zhihu?: string
   email?: string
