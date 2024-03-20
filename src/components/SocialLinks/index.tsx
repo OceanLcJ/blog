@@ -6,7 +6,7 @@ import styles from './styles.module.scss'
 
 export type Social = {
   github?: string
-  twitter?: string
+  // twitter?: string
   juejin?: string
   csdn?: string
   qq?: string
