@@ -18,9 +18,9 @@ type SocialValue = {
 }
 
 const social: Social = {
-  github: 'https://github.com/oceanlcj',
+  github: 'https://github.com/OceanLcJ',
   // twitter: 'https://twitter.com/kuizuo',
-  juejin: 'https://juejin.cn/user/1565318510545901',
+  juejin: 'https://juejin.cn/user/220360364790941',
   // qq: 'https://img.kuizuo.cn/qq.png',
   // wx: 'https://img.kuizuo.cn/wechat.png',
   // zhihu: 'https://www.zhihu.com/people/kuizuo',
