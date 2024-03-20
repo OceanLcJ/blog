@@ -45,7 +45,7 @@ const config: Config = {
     },
     navbar: {
       logo: {
-        alt: '愧怍',
+        alt: 'mochi',
         src: 'img/logo.webp',
         srcDark: 'img/logo.webp',
       },
@@ -121,7 +121,7 @@ const config: Config = {
         <p style="display: inline-flex; align-items: center;"><img style="height:20px;margin-right: 0.5rem;" src="/img/police.png" alt="police" height="20"/><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=${beian1.match(
           /\d+/,
         )?.[0]}" >${beian1}</a></p>
-        <p>Copyright © 2020 - PRESENT 愧怍 Built with Docusaurus.</p>
+        <p>Copyright © 2020 - PRESENT mochi Built with Docusaurus.</p>
         `,
     },
     algolia: {
@@ -233,8 +233,8 @@ const config: Config = {
           defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
         feedOptions: {
           type: 'all',
-          title: '愧怍',
-          copyright: `Copyright © ${new Date().getFullYear()} 愧怍 Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
+          title: 'mochi',
+          copyright: `Copyright © ${new Date().getFullYear()} mochi Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
         },
       },
     ],
@@ -244,7 +244,7 @@ const config: Config = {
       tagName: 'meta',
       attributes: {
         name: 'description',
-        content: '愧怍的个人博客',
+        content: 'mochi的个人博客',
       },
     },
   ],
