@@ -6,6 +6,9 @@ authors: mochi
 tags: [随笔, code, seo]
 keywords: [随笔, code, seo]
 ---
+<!-- truncate -->
+
+
 ## 一、添加百度收录
 
 ### 1. 通过百度搜索到你的站点查看是否搜录
