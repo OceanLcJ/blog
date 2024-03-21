@@ -4,7 +4,7 @@ export const projects: Project[] = [
     description: '🦖 基于 Docusaurus 静态网站生成器实现个人博客',
     preview: '/img/project/blog.png',
     website: 'https://blog.mochiworld.cn',
-    source: 'https://github.com/oceanlcj/blog',
+    source: 'https://github.com/OceanLcJ/blog',
     tags: ['opensource', 'design', 'favorite'],
     type: 'web',
   },

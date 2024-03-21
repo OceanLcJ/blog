@@ -2,12 +2,12 @@
   "name": "blog",
   "version": "3.0.0",
   "author": {
-    "url": "https://github.com/OceanLcj",
+    "url": "https://github.com/OceanLcJ",
     "email": "hi@mochi.cn",
     "name": "mochi"
   },
   "repository": {
-    "url": "https://github.com/OceanLcj/blog",
+    "url": "https://github.com/OceanLcJ/blog",
     "type": "git"
   },
   "homepage": "https://blog.mochiworld.cn",
