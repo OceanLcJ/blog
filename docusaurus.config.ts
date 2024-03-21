@@ -125,8 +125,8 @@ const config: Config = {
         `,
     },
     algolia: {
-      appId: 'GV6YN1ODMO',
-      apiKey: '50303937b0e4630bec4a20a14e3b7872',
+      appId: 'OAMU9AHLVV',
+      apiKey: '4edfe6bced10f77f2916dca86a1cf5d8',
       indexName: 'kuizuo',
     },
     prism: {
@@ -157,10 +157,10 @@ const config: Config = {
       ],
     },
     giscus: {
-      repo: 'kuizuo/blog',
-      repoId: 'MDEwOlJlcG9zaXRvcnkzOTc2MjU2MTI=',
+      repo: 'OceanLcj/blog',
+      repoId: 'R_kgDOLi7qvQ',
       category: 'General',
-      categoryId: 'DIC_kwDOF7NJDM4CPK95',
+      categoryId: 'DIC_kwDOLi7qvc4CeILt',
       theme: 'light',
       darkTheme: 'dark_dimmed',
     } satisfies Partial<GiscusConfig>,
