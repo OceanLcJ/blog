@@ -1153,4 +1153,17 @@ export const resourceData: ResourceCategory[] = [
       },
     ],
   },
+  ,
+  {
+    name: '影视网站',
+    resources: [
+      {
+        name: '低端影视',
+        desc: '一个在线的高清影视网站，看你想看。',
+        logo: 'https://ddys.pro/favicon-32x32.png',
+        href: 'https://ddys.pro',
+        tags: ['影视', '高清', '个人意识强'],
+      }
+    ],
+  },
 ]
