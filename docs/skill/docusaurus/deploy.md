@@ -4,8 +4,7 @@ slug: /docusaurus-deploy
 title: 部署
 authors: kuizuo
 ---
-
-我之前使用 [Vercel](https://vercel.com) 一把梭，无需任何配置。这样我就只需要专注输出内容即可。这是我当时使用 Vercel 部署的文章 [Vercel 部署个人博客](/blog/vercel-deploy-blog)
+我之前使用 [Vercel](https://vercel.com) 一把梭，无需任何配置。这样我就只需要专注输出内容即可。
 
 但如今，`vercel.app` 被 DNS 污染，即被墙了，导致国内无法访问，虽然使用有自己的域名解析到 Vercel 上也可能访问，但被墙了，也就意味着国内 DNS 的解析速度必然有所下降，导致站点访问速度有所下降。
 
@@ -29,7 +28,7 @@ authors: kuizuo
 
 由于代码提交到代码仓库(github)，则需要借用 CI 服务来帮助我们完成这些任务，这里我使用了 [Github Action](https://github.com/marketplace) 来帮助我构建，构建记录可以在 [Actions · kuizuo/blog](https://github.com/kuizuo/blog/actions) 中查看。以下是我的配置文件
 
-```yaml title='.github/workflows/ci.yml' icon='logos:github-actions'
+```yaml
 name: CI
 
 on:
