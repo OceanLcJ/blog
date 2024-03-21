@@ -2,12 +2,11 @@
 slug: with-prisma-dont-use-typeorm
 title: 有了 Prisma 就别用 TypeORM 了
 date: 2024-01-13
-authors: kuizuo
+authors: mochi
 tags: [orm, prisma, typeorm]
 keywords: [orm, prisma, typeorm]
 image: https://img.kuizuo.cn/2024/0113174834-202401131748137.png
 ---
-
 要说 2024 年 Node.js 的 ORM 框架应该选择哪个？毫无疑问选 Prisma。至于为何，请听我细细道来。
 
 <!-- truncate -->
@@ -58,7 +57,7 @@ TypeORM 距离上次更新已经过去半年之久了（下图截取自 24 年 1
 
 `synchronize` 表示数据库的结构是否和代码保持同步，官方提及到请不要在生产环境中使用，但在开发阶段这也并不是一个很好的做法。举个例子，有这么一个实体
 
-```ts title='user.entity.ts' icon='logos:nestjs'
+```ts
 @Entity()
 export class User {
   @PrimaryGeneratedColumn()
@@ -91,7 +90,7 @@ ALTER TABLE `user` ADD `title` varchar(255) NOT NULL
 
 相信你一定有在 `xxx.module.ts` 中在 imports 中导入 `TypeOrmModule.forFeature([xxxEntity])` 的经历。就像下面代码这样：
 
-```ts title='xxx.module.ts' icon='logos:nestjs'
+```ts
 @Module({
   imports: [TypeOrmModule.forFeature([UserEntity])],
   controllers: [UserController],
@@ -117,7 +116,7 @@ Error: Nest can't resolve dependencies of the userService (?). Please make sure 
 
 此外这还不是最繁琐的，你还需要再各个 service 中，通过下面的代码来注入 userRepository。
 
-```ts title='user.service.ts' icon='logos:nestjs'
+```ts
 @InjectRepository(UserEntity)
 private readonly userRepository: Repository<UserEntity>
 ```
@@ -128,7 +127,7 @@ private readonly userRepository: Repository<UserEntity>
 
 然后在 service 上，注入 PrismaService 后，就可以通过 `this.prisma[model]` 来调用模型(实体) ，就像这样
 
-```ts title='app.service.ts' icon='logos:nestjs'
+```ts
 import { Injectable } from '@nestjs/common'
 import { PrismaService } from 'nestjs-prisma'
 
@@ -189,7 +188,7 @@ const user = userRepository.save(newUser)
 
 当然你可以对 User 实体中做点手脚，像下面这样加一个构造函数
 
-```ts title='user.entity.ts' icon='logos:nestjs'
+```ts
 @Entity()
 export class User {
   @PrimaryGeneratedColumn()
@@ -385,7 +384,7 @@ const { items, meta } = paginate(queryBuilder, { page, limit })
 
 举个例子，可以为 schema.prisma 添加一条 generator，长下面这样
 
-```prisma title='prisma.schema' icon='logos:prisma'
+```prisma
 generator client {
   provider = "prisma-client-js"
   output   = "./client"
@@ -412,7 +411,7 @@ model User {
 
 执行构建命令后，这将会自动生成 zod/index.ts 文件，将包含 UserSchema 信息，其中片段代码如下
 
-```ts title='zod/index.ts' icon='logos:typescript-icon'
+```ts
 export const UserSchema = z.object({
   id: z.string().uuid(),
   email: z.string(),

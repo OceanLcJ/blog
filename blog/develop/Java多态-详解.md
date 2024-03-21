@@ -6,6 +6,9 @@ authors: mochi
 tags: [学习, code, Java]
 keywords: [学习, code, Java]
 ---
+<!-- truncate -->
+
+
 ## 1.基本介绍
 
 ### 1.1多态的理解
@@ -74,7 +77,7 @@ public class Test {
     public static void main(String[] args) { 
         show(new Cat()); // 以 Cat 对象调用 show 方法 
         show(new Dog()); // 以 Dog 对象调用 show 方法 
-      
+    
         Animal a = new Cat(); // 向上转型 
         a.eat(); // 调用的是 Cat 的 eat 
         Cat c = (Cat)a; // 向下转型 
@@ -190,13 +193,13 @@ public class Test01 {
         //多态形式，创建对象
         //注意编译类型看等号左边，运行类型看等号右边
         Person p1 = new Student();  
-	
+
         //此时调用的是 Student 类 的 mission() 方法
         p1.mission();
-	
+
         //多态形式，创建对象
         Person p2 = new Teacher();
-	
+
         //此时调用的是 Teacher 类 的 mission() 方法
         p2.mission();
     }
@@ -317,13 +320,13 @@ public class Test02 {
     public static void main(String[] args) {
         //向上转型（自动类型转换）
         Person p1 = new Student();
-	
+
         //调用的是 Student 的 mission
         p1.mission(); 
-	
+
         //向下转型
         Student s1 = (Student)p1;
-	
+
         //调用的是 Student 的 score
         s1.score();
     }
@@ -352,13 +355,13 @@ public class Test02 {
     public static void main(String[] args) {
         //向上转型
         Person p1 = new Student();
-	
+
         //调用的是 Student 的 mission
         p1.mission(); 
-	
+
         //向下转型
         Teacher t1 = (Teacher) p1;
-	
+
         //运行时报错
         p1.salary();
     }
@@ -381,10 +384,10 @@ public class Test03 {
     public static void main(String[] args) {
         //向上转型
         Person p1 = new Student();
-	
+
         //调用的是 Student 的 mission
         p1.mission();
-	
+
         //向下转型
         //利用 instanceof 进行判断
         if(p1 instanceof Student) {	//判断对象 p1 是否是 Student 类 的实例
@@ -422,7 +425,7 @@ public class DynamicBinding {
 	//程序在编译阶段只知道 p1 是 Person 类型
 	//程序在运行的时候才知道堆中实际的对象是 Student 类型
 	Person p1 = new Student();  
-	
+
 	//程序在编译时 p1 被编译器看作 Person 类型
 	//因此编译阶段只能调用 Person 类型中定义的方法
 	//在编译阶段，p1 引用绑定的是 Person 类型中定义的 mission 方法（静态绑定）
@@ -570,7 +573,7 @@ public class PolyArray {
 	persons[0] = new Person("小汤");
 	persons[1] = new Student("小韬", 100);
 	persons[2] = new Teacher("小蒲", 10000);
-	
+
 	//循环遍历多态数组，调用 mission
 	for(int i = 0; i < persons.length; i++) {
             //此处涉及动态绑定机制
@@ -608,13 +611,13 @@ public class PolyParameter {
     public static void main(String[] args) {
         Student s1 = new Student("小蓝同学");
 	Teacher t1 = new Teacher("小绿老师");
-	
+
 	//需先 new 一个当前类的实例化，才能调用 test 方法
 	PolyParameter polyParameter = new PolyParameter();
-	
+
 	//实参是子类
 	polyParameter.test(s1);
-	polyParameter.test(t1);	
+	polyParameter.test(t1);
     }
 
     //定义方法test，形参为 Person 类型(形参是父类)

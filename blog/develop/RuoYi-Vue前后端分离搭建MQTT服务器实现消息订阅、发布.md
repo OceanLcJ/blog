@@ -6,6 +6,9 @@ authors: mochi
 tags: [学习, code, Java, MQTT]
 keywords: [学习, code, Java, MQTT]
 ---
+<!-- truncate -->
+
+
 ## 1.在RuoYi-Vue项目的ruoyi-common模块下的pom.xml加入jar依赖
 
 ```xml

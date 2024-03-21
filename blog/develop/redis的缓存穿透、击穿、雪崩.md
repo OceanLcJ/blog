@@ -6,6 +6,9 @@ authors: mochi
 tags: [学习, code, Java, Redis]
 keywords: [学习, code, Java, Redis]
 ---
+<!-- truncate -->
+
+
 ## 1.缓存穿透(redis和mysql都 不存在的数据)
 
     查询一个**不存在**的数据，mysql查询不到数据也不会直接写入缓存，就会导致每次请求都查数据库。
@@ -104,13 +107,13 @@ public class CacheClient {
             //3.存在直接返回
             return JSONUtil.toBean(json, type);
         }
-	
+
         // 判断命中的是否为空值
         if (json != null){
             // 返回一个null
             return null;
         }
-	
+
         // 4.不存在，根据id查询数据库
         R r = dbFallback.apply(id);
 	   	// 5.不存在返回null

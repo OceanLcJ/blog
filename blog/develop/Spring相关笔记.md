@@ -7,6 +7,9 @@ tags: [spring, 面试, 笔记]
 keywords: [spring, 面试, 笔记]
 image: https://springdoc.cn/logo-512.webp
 ---
+<!-- truncate -->
+
+
 ## 一、Spring框架中的单例bean是现场安全的吗？
 
  不是线程安全的

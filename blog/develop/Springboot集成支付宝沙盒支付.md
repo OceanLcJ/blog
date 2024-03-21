@@ -6,6 +6,9 @@ authors: mochi
 tags: [学习, code, Java, Pay]
 keywords: [学习, code, Java, Pay]
 ---
+<!-- truncate -->
+
+
 ## 1.开发前准备
 
 ### 1.1 支付宝沙盒配置
