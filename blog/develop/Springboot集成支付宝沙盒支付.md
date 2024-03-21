@@ -182,7 +182,9 @@ public class AliPayController {
 
     测试的url格式: http://localhost:你的端口/alipay/pay?subject=任意填&traceNo=任意填&totalAmount=填数字
 
-    age：http://localhost:8081/alipay/pay?subject=test&traceNo=666&totalAmount=1000
+```plaintext
+age：http://localhost:8081/alipay/pay?subject=test&traceNo=666&totalAmount=1000
+```
 
     成功截图：
 
