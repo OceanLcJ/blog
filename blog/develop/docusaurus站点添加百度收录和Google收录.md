@@ -1,7 +1,7 @@
 ---
 slug: seo-baidu-google
 title: docusaurus站点添加百度收录和Google收录
-date: 2024-03-21
+date: 2024-03-20
 authors: mochi
 tags: [随笔, code, seo]
 keywords: [随笔, code, seo]
