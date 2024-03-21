@@ -1,5 +1,11 @@
 kuizuo:
   name: mochi
-  title: 全栈 typescripter / 即将毕业的学生
-  url: https://github.com/kuizuo
+  title: 全栈开发者
+  url: https://github.com/OceanLcj
+  image_url: /img/logo.webp
+
+mochi:
+  name: mochi
+  title: 全栈开发者
+  url: https://github.com/OceanLcj
   image_url: /img/logo.webp
