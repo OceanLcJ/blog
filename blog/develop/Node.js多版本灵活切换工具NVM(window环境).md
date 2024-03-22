@@ -18,7 +18,7 @@ keywords: [node, code, nvm]
 
 下载地址: [Releases · coreybutler/nvm-windows (github.com)](https://github.com/coreybutler/nvm-windows/releases "Releases · coreybutler/nvm-windows (github.com)")
 
-![img](https://img2.imgtp.com/2024/03/23/01kkXlzF.png "下载图片")
+![img](https://img2.imgtp.com/2024/03/23/01kkXlzF.png)
 
 下载好进行安装，一直next就好了。
 
