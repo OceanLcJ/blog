@@ -1,16 +1,20 @@
+---
+slug: node-nvm
+title: Node.js多版本灵活切换工具NVM(window环境)
+date: 2024-03-23
+authors: mochi
+tags: [node, code, nvm]
+keywords: [node, code, nvm]
+---
+<!-- truncate -->
+
 ## 1.前提
 
     在实际开发工作中，会经常切换各种不同的项目，且项目的node版本不一致。而node版本不一致会导致项目中的一些语法报错，为此需要借助nvm管理工具。
 
+    **注意：**如果我们之前安装过nodejs，请将其卸载，打开控制面板即可卸载本地node。
 
-<!-- truncate -->
-
-
-**注意：**如果我们之前安装过nodejs，请将其卸载，打开控制面板即可卸载本地node。
-
-
-
-## **2.NVM下载和安装**
+## 2.NVM下载和安装
 
 下载地址: [Releases · coreybutler/nvm-windows (github.com)](https://github.com/coreybutler/nvm-windows/releases "Releases · coreybutler/nvm-windows (github.com)")
 
@@ -26,10 +30,9 @@
 
 * 安装特定版本的Node.js
 
-```
-	nvm install <version>
-```
-
+  ```
+  nvm install <version>
+  ```
 * 卸载特定版本的Node.js
 
   ```
