@@ -4,7 +4,6 @@ slug: /docusaurus-search
 title: 搜索
 authors: kuizuo
 ---
-
 > [搜索 | Docusaurus](https://docusaurus.io/zh-CN/docs/search)
 
 ## [algolia](https://www.algolia.com/)
@@ -12,7 +11,6 @@ authors: kuizuo
 有两种方案来配置 algolia。
 
 1. 让 Docsearch（准确来说是 [Algolia Crawler](https://crawler.algolia.com/)） 每周一次爬取你的网站（也可自行爬取），**前提是项目开源，否则收费**，好处是无需额外配置，申请比较繁琐（本博客目前采用的方式）
-
 2. 自己运行 DocSearch 爬虫，可以随时爬取，但需要自行去注册账号和搭建爬虫环境，或者使用 Github Actions 来帮我们爬取。
 
 ### 方案1
@@ -23,7 +21,7 @@ authors: kuizuo
 
 然后将得到 algolia 的 appId，apiKey，indexName 填写到 `docusaurus.config.ts` 中即可。
 
-```javascript title='docusaurus.config.ts'
+```javascript
 algolia: {
   appId: 'GV6YN1ODMO',
   apiKey: '50303937b0e4630bec4a20a14e3b7872',
@@ -66,7 +64,7 @@ themeConfig: {
 jq-1.6
 ```
 
-接着在任意目录中创建 `.env` 文件，填入对应的 APPID 和 API KEY（这里是`Admin API Key`，当时我还一直以为是 Search API Key 坑了我半天 😭）
+接着在任意目录中创建 `.env` 文件，填入对应的 APPID 和 API KEY（这里是 `Admin API Key`，当时我还一直以为是 Search API Key 坑了我半天 😭）
 
 ```js
 APPLICATION_ID = YOUR_APP_ID
@@ -75,7 +73,7 @@ API_KEY = YOUR_API_KEY
 
 然后创建 `docsearch.json` 文件到项目目录下，其内容可以参考如下（将高亮部分替换成你的网站）
 
-```json title='docsearch.json' {2-4}
+```json
 {
   "index_name": "xxxx",
   "start_urls": ["https://example.com"],
@@ -146,7 +144,9 @@ docker run -it --env-file=.env -e "CONFIG=$(cat docsearch.json | jq -r tostring)
 
 因为要确保项目成功部署后才触发，如果采用 vercel 部署可以按照如下触发条件。
 
-```yaml title='.github/workflows/docsearch.yml'
+    1.在你的项目新建.github/workflows/docsearch.yml
+
+```yaml
 name: docsearch
 
 on: deployment
@@ -174,7 +174,15 @@ jobs:
             algolia/docsearch-scraper
 ```
 
-添加 [secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) 到你的 Github 仓库中，提交代码便可触发爬虫规则。
+    2.添加以下secrets到你的 Github 仓库中，提交代码便可触发爬虫规则。
+
+![](https://img2.imgtp.com/2024/03/23/Me8BVXk9.jpg)
+
+    3.验证成功
+
+    可以在项目中的Action中查看是否自动爬取成功
+
+![img](https://img2.imgtp.com/2024/03/23/3QYC1sZG.jpg)
 
 ## [orama](https://docs.oramasearch.com/open-source/plugins/plugin-docusaurus)
 
