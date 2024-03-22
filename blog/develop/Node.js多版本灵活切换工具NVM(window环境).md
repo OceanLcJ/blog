@@ -18,13 +18,13 @@ keywords: [node, code, nvm]
 
 下载地址: [Releases · coreybutler/nvm-windows (github.com)](https://github.com/coreybutler/nvm-windows/releases "Releases · coreybutler/nvm-windows (github.com)")
 
-![img](https://img-blog.csdnimg.cn/direct/b687e2d6c7a5492c8995fa1c464413d3.png "下载图片")
+![img](https://img2.imgtp.com/2024/03/23/01kkXlzF.png "下载图片")
 
 下载好进行安装，一直next就好了。
 
 安装完成后。命令行执行nvm -v查看版本：
 
-![img](https://img-blog.csdnimg.cn/direct/5da4ecd1ed1a4233aa60852c1c659538.png)
+![img](https://img2.imgtp.com/2024/03/23/tWD3vT7Z.png)
 
 ## 3.NVM命令介绍
 
@@ -33,16 +33,19 @@ keywords: [node, code, nvm]
   ```
   nvm install <version>
   ```
+
 * 卸载特定版本的Node.js
 
   ```
   nvm uninstall <version>
   ```
+
 * 切换Node.js版本
 
   ```
   nvm use <version>
   ```
+
 * 查看已安装的Node.js
 
   ```
