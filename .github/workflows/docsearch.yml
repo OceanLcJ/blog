@@ -23,3 +23,4 @@ jobs:
             --env API_KEY=${ALGOLIA_API_KEY} \
             --env "CONFIG=${CONFIG}" \
             algolia/docsearch-scraper
+ 
