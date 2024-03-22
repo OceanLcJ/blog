@@ -7,6 +7,9 @@ tags: [algorithm, sliding-window]
 keywords: [algorithm, sliding-window]
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 ## [无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/)
 
 > 给定一个字符串 `s` ，请你找出其中不含有重复字符的 **最长子串** 的长度。
@@ -56,6 +59,22 @@ var lengthOfLongestSubstring = function (s) {
   return ans
 }
 ```
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+<Tabs>
+  <TabItem value="apple" label="Apple" default>
+    This is an apple 🍎
+  </TabItem>
+  <TabItem value="orange" label="Orange">
+    This is an orange 🍊
+  </TabItem>
+  <TabItem value="banana" label="Banana">
+    This is a banana 🍌
+  </TabItem>
+</Tabs>
 
 时间复杂度：O(N)，其中 N 是字符串的长度。左指针和右指针分别会遍历整个字符串一次。
 
