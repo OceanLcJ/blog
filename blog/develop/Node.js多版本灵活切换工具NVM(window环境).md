@@ -5,7 +5,7 @@ date: 2024-03-23
 authors: mochi
 tags: [node, code, nvm]
 keywords: [node, code, nvm]
-image: https://nvm.uihtm.com/images/logo.png
+image: https://tse4-mm.cn.bing.net/th/id/OIP-C.9_BO42NSZdTOIxYECOxOHAHaCi?rs=1&pid=ImgDetMain
 ---
 <!-- truncate -->
 
