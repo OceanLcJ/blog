@@ -5,9 +5,9 @@ date: 2023-10-08
 authors: mochi
 tags: [学习, code, Java]
 keywords: [学习, code, Java]
+image: https://tse1-mm.cn.bing.net/th/id/OIP-C.U-eZ7JkXmXL-QOXAkMm1nAHaC9?rs=1&pid=ImgDetMain
 ---
 <!-- truncate -->
-
 
 ## 1.基本介绍
 
@@ -77,7 +77,7 @@ public class Test {
     public static void main(String[] args) { 
         show(new Cat()); // 以 Cat 对象调用 show 方法 
         show(new Dog()); // 以 Dog 对象调用 show 方法 
-    
+  
         Animal a = new Cat(); // 向上转型 
         a.eat(); // 调用的是 Cat 的 eat 
         Cat c = (Cat)a; // 向下转型 

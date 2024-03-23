@@ -5,8 +5,8 @@ date: 2023-11-30
 authors: kuizuo
 tags: [杂谈, restful]
 keywords: [杂谈, restful]
+image: https://assets.apidog.com/blog-learn/2023/04/Group-43--2-.png
 ---
-
 关于 restful api 想必不用多说，已经有很多文章都阐述过它的设计原则，但遵循这个原则可以让你的 API 接口更加规范吗？以下是我对 restful api 风格的一些思考🤔。
 
 <!-- truncate -->
@@ -31,18 +31,18 @@ keywords: [杂谈, restful]
 - 更新文章 `PUT /articles/:id`
 - 删除文章 `DELETE /articles/:id`
 
-当然，我相信肯定也有`GET /article—list` `POST /add-article` 这样的答案，不过这些不在 restful api 风格的范畴，就不考虑了。
+当然，我相信肯定也有 `GET /article—list` `POST /add-article` 这样的答案，不过这些不在 restful api 风格的范畴，就不考虑了。
 
 而这时 查看我的文章 或许就需要稍加思考，或许你会有以下几种方式
 
 - `GET /my-articles` 从资源角度来看肯定不好，因为此时在 url 不能很直观地体现请求资源，同时在控制器文件(controller) 就与 article 分离了，并且还占用了 / 下路径。
 - `GET /articles/mine` 则又不那么遵循 restful api 风格，挺违和的。
 
-那么这时不妨遵循 **资源从属关系**，在这里 文章所属的对象就用户，因此查看他人的文章可以这么设计`GET /users/:userId/articles` 获取特定用户（userId）的文章列表。
+那么这时不妨遵循 **资源从属关系**，在这里 文章所属的对象就用户，因此查看他人的文章可以这么设计 `GET /users/:userId/articles` 获取特定用户（userId）的文章列表。
 
 而 查看我的文章 同样也可用此 URL，只需将 userId 更改为自己的便可。从 api 的 URL 来看是很舒服了，但是从代码开发的角度上问题又有了问题了。。。
 
-对于 user 资源，是不是也有查询，创建，更新，删除等接口，即 查询用户 `GET /users`，创建用户`POST /users/` 等等。。
+对于 user 资源，是不是也有查询，创建，更新，删除等接口，即 查询用户 `GET /users`，创建用户 `POST /users/` 等等。。
 
 我是不是就需要在 user 这么重要的资源控制器上去添加一些其他方法，所对应的代码就如下所示
 
@@ -138,7 +138,7 @@ GET /articles/1
 GET /articles/1/author
 ```
 
-要么两条请求获取相应数据，要么为调用方“定制”一个接口，如`GET /getArticleInfo`，这样只需一条请求便可得到想要的数据。但这个就破坏了 restful API 接口风格，并且在复杂的业务中，比如说还要获取博文的评论等等，后端就要额外提供一个接口，可以说是非常繁琐了。相比之下 [GraphQL](https://graphql.org/) 就更为灵活了。
+要么两条请求获取相应数据，要么为调用方“定制”一个接口，如 `GET /getArticleInfo`，这样只需一条请求便可得到想要的数据。但这个就破坏了 restful API 接口风格，并且在复杂的业务中，比如说还要获取博文的评论等等，后端就要额外提供一个接口，可以说是非常繁琐了。相比之下 [GraphQL](https://graphql.org/) 就更为灵活了。
 
 ## 写到最后
 

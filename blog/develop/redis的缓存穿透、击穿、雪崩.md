@@ -5,9 +5,9 @@ date: 2024-02-21
 authors: mochi
 tags: [学习, code, Java, Redis]
 keywords: [学习, code, Java, Redis]
+image: https://pic.crazytaxii.com/Redis_Logo.png
 ---
 <!-- truncate -->
-
 
 ## 1.缓存穿透(redis和mysql都 不存在的数据)
 

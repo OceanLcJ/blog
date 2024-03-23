@@ -5,9 +5,9 @@ date: 2023-09-21
 authors: mochi
 tags: [学习, code, Java, MQTT]
 keywords: [学习, code, Java, MQTT]
+image: https://tse2-mm.cn.bing.net/th/id/OIP-C.xO9sORk6g0UD2SyhAtof3QHaCJ?rs=1&pid=ImgDetMain
 ---
 <!-- truncate -->
-
 
 ## 1.在RuoYi-Vue项目的ruoyi-common模块下的pom.xml加入jar依赖
 

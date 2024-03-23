@@ -5,6 +5,7 @@ date: 2024-03-23
 authors: mochi
 tags: [node, code, nvm]
 keywords: [node, code, nvm]
+image: https://nvm.uihtm.com/images/logo.png
 ---
 <!-- truncate -->
 
@@ -33,19 +34,16 @@ keywords: [node, code, nvm]
   ```
   nvm install <version>
   ```
-
 * 卸载特定版本的Node.js
 
   ```
   nvm uninstall <version>
   ```
-
 * 切换Node.js版本
 
   ```
   nvm use <version>
   ```
-
 * 查看已安装的Node.js
 
   ```

@@ -5,9 +5,9 @@ date: 2024-03-21
 authors: mochi
 tags: [随笔, code, seo]
 keywords: [随笔, code, seo]
+image: https://pic4.zhimg.com/v2-32a3efe85f548bd3f8abc33d496c27bc_720w.jpg?source=172ae18b
 ---
 <!-- truncate -->
-
 
 ## 一、添加百度收录
 
