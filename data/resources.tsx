@@ -38,6 +38,12 @@ export const resourceData: ResourceCategory[] = [
         href: 'https://juejin.cn/',
       },
       {
+        name: 'V2ex',
+        desc: '创意工作者的社区。讨论编程、设计、硬件、游戏等令人激动的话题。',
+        logo: '/img/resource/V2ex.png',
+        href: 'https://www.v2ex.com/',
+      },
+      {
         name: 'OSS Insight',
         desc: 'Open Source Software Insight',
         logo: '/img/resource/ossinsight.png',
