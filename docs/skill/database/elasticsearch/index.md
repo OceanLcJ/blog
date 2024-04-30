@@ -6,7 +6,6 @@ date: 2021-03-15
 tags: [elasticsearch, database]
 keywords: [elasticsearch, database]
 ---
-
 [Elasticsearch Clients | Elastic 官方文档](https://www.elastic.co/guide/en/elasticsearch/client/index.html)
 
 ## 安装
@@ -82,13 +81,13 @@ exit
 docker restart elasticsearch
 ```
 
-然后可以在 kibana 界面的`dev tools`中验证是否安装成功；
+然后可以在 kibana 界面的 `dev tools`中验证是否安装成功；
 
 ```
 POST test/_analyze
 {
   "analyzer": "ik_max_word",
-  "text": "你好我是愧怍"
+  "text": "你好我是mochi"
 }
 ```
 
@@ -244,11 +243,9 @@ elasticdump --input SOURCE --output DESTINATION [OPTIONS]
 - limit
 
   每个操作要批量移动多少对象,Limit 是文件流的近似值 默认:100
-
 - type
 
   导出类型 默认 data [settings, analyzer, data, mapping, policy, alias, template, component_template, index_template]
-
 - 其他参数看文档,暂时都用不上
 
 例:
@@ -326,7 +323,7 @@ GET answer/_search
 }
 ```
 
-要删除 topic 为“测试”，只需要将`_search`替换为`_delete_by_query`即可。
+要删除 topic 为“测试”，只需要将 `_search`替换为 `_delete_by_query`即可。
 
 ---
 
@@ -359,11 +356,11 @@ PUT 索引名称/_settings?preserve_existing=true
 }
 ```
 
-3、在请求的时候附加参数`"track_total_hits":true`
+3、在请求的时候附加参数 `"track_total_hits":true`
 
 ### elasticsearch 默认分配内容为 1g
 
-elasticsearch 默认分配内容为 1g，在`jvm.options`配置如下
+elasticsearch 默认分配内容为 1g，在 `jvm.options`配置如下
 
 ```
 ################################################################

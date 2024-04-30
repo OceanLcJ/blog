@@ -4,16 +4,15 @@ slug: /docusaurus-config
 title: 配置文件
 authors: kuizuo
 ---
-
 ## docusaurus.config.ts
 
 `docusaurus.config.ts` 位于你的网站的根目录，包含了你的站点的配置信息。
 
 在这里可以修改 logo，站点名(title)，作者名，顶部的公告(announcementBar)，导航栏(navbar)，底部导航(footer)等等。
 
-```typescript title='docusaurus.config.ts' icon='logos:docusaurus'
+```typescript
 const config: Config = {
-  title: '愧怍的小站',
+  title: 'mochi的小站',
   url: 'https://kuizuo.cn',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
@@ -24,7 +23,7 @@ const config: Config = {
     metadata: [
       {
         name: 'keywords',
-        content: '愧怍, kuizuo, blog, javascript, typescript, node, react, vue, web, 前端, 后端',
+        content: 'mochi, blog, javascript, typescript, node, react, vue, web, 前端, 后端',
       },
     ],
     // ...
@@ -75,7 +74,7 @@ export default config
 
 内置了以下主流的可供选择的几个社交账号。
 
-```typescript title='social.ts' icon='logos:typescript-icon'
+```typescript
 export type Social = {
   github?: string
   twitter?: string
