@@ -180,7 +180,6 @@ const config: Config = {
   presets: [
     [
       'classic',
-      '@docusaurus/preset-classic',
       {
         docs: {
           path: 'docs',
@@ -191,11 +190,7 @@ const config: Config = {
           customCss: ['./src/css/custom.scss'],
         },
         sitemap: {
-          lastmod: 'date',
-          changefreq: 'weekly',
           priority: 0.5,
-          ignorePatterns: ['/tags/**'],
-          filename: 'sitemap.xml',
         },
         gtag: {
           trackingID: 'G-S4SD5NXWXF',
@@ -209,6 +204,16 @@ const config: Config = {
     'docusaurus-plugin-image-zoom',
     'docusaurus-plugin-sass',
     '@docusaurus/plugin-ideal-image',
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        lastmod: 'date',
+        changefreq: 'weekly',
+        priority: 0.5,
+        ignorePatterns: ['/tags/**'],
+        filename: 'sitemap.xml',
+      },
+    ],
     ['docusaurus-plugin-baidu-tongji', { token: 'f91a15bda7ec05a43959e5a4ee64682b' }],
     [
       '@docusaurus/plugin-pwa',
