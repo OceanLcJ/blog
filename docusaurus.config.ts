@@ -180,6 +180,7 @@ const config: Config = {
   presets: [
     [
       'classic',
+      '@docusaurus/preset-classic',
       {
         docs: {
           path: 'docs',
@@ -190,7 +191,11 @@ const config: Config = {
           customCss: ['./src/css/custom.scss'],
         },
         sitemap: {
+          lastmod: 'date',
+          changefreq: 'weekly',
           priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
         },
         gtag: {
           trackingID: 'G-S4SD5NXWXF',
