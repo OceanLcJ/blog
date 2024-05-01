@@ -179,7 +179,7 @@ const config: Config = {
   } satisfies Preset.ThemeConfig,
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       {
         docs: {
           path: 'docs',
