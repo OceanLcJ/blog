@@ -189,9 +189,13 @@ const config: Config = {
         theme: {
           customCss: ['./src/css/custom.scss'],
         },
-        // sitemap: {
-        //   priority: 0.5,
-        // },
+        sitemap: {
+          lastmod: 'date',
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        },
         gtag: {
           trackingID: 'G-S4SD5NXWXF',
           anonymizeIP: true,
@@ -236,16 +240,6 @@ const config: Config = {
           title: 'mochi',
           copyright: `Copyright © ${new Date().getFullYear()} mochi Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
         },
-      },
-    ],
-    [
-      '@docusaurus/plugin-sitemap',
-      {
-        lastmod: 'date',
-        changefreq: 'weekly',
-        priority: 0.5,
-        ignorePatterns: ['/tags/**'],
-        filename: 'sitemap.xml',
       },
     ],
   ],
