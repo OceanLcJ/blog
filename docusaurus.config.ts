@@ -189,9 +189,9 @@ const config: Config = {
         theme: {
           customCss: ['./src/css/custom.scss'],
         },
-        sitemap: {
-          priority: 0.5,
-        },
+        // sitemap: {
+        //   priority: 0.5,
+        // },
         gtag: {
           trackingID: 'G-S4SD5NXWXF',
           anonymizeIP: true,
