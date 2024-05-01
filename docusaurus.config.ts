@@ -204,16 +204,6 @@ const config: Config = {
     'docusaurus-plugin-image-zoom',
     'docusaurus-plugin-sass',
     '@docusaurus/plugin-ideal-image',
-    [
-      '@docusaurus/plugin-sitemap',
-      {
-        lastmod: 'date',
-        changefreq: 'weekly',
-        priority: 0.5,
-        ignorePatterns: ['/tags/**'],
-        filename: 'sitemap.xml',
-      },
-    ],
     ['docusaurus-plugin-baidu-tongji', { token: 'f91a15bda7ec05a43959e5a4ee64682b' }],
     [
       '@docusaurus/plugin-pwa',
@@ -246,6 +236,16 @@ const config: Config = {
           title: 'mochi',
           copyright: `Copyright © ${new Date().getFullYear()} mochi Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
         },
+      },
+    ],
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        lastmod: 'date',
+        changefreq: 'weekly',
+        priority: 0.5,
+        ignorePatterns: ['/tags/**'],
+        filename: 'sitemap.xml',
       },
     ],
   ],
