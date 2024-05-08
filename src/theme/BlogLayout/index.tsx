@@ -20,7 +20,7 @@ export default function BlogLayout(props: Props): JSX.Element {
               'col--8 col--offset-2': !hasSidebar,
             })}
             itemScope
-            itemType="h ttp://schema.org/Blog"
+            itemType="http://schema.org/SoftwareApplication"
           >
             {children}
           </main>
