@@ -89,6 +89,12 @@ export const Friends: Friend[] = [
     website: 'https://www.licodeao.top',
     avatar: '/img/friend/licodeao.png',
   },
+  {
+    title:'冷若冰蓝',
+    description: '总有人间一两风，填我十万八千梦。',
+    website: 'https://018z.com/',
+    avatar: '/img/friend/018z.jpg',
+  },
 ]
 
 export type Friend = {
