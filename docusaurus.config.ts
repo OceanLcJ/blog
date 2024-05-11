@@ -95,6 +95,7 @@ const config: Config = {
           title: '社交媒体',
           items: [
             { label: '关于我', to: '/about' },
+            { label: '隐私协议', to: '/privacy-policy' }
             { label: 'GitHub', href: social.github.href },
             // { label: 'Twitter', href: social.twitter.href },
             { label: '掘金', href: social.juejin.href },
