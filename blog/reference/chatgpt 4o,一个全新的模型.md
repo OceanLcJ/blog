@@ -5,6 +5,7 @@ authors: mochi
 tags: [随记, AI, ChatGPT]
 keywords: [随记, AI, ChatGPT]
 img: https://th.bing.com/th/id/OIP.Lj3jTynz3xM6db9w9O7kqgHaE8?rs=1&pid=ImgDetMain
+
 <!-- truncate -->
 
 # 引入GPT-4o：先进的人工智能技术
