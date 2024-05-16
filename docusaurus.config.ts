@@ -209,6 +209,7 @@ const config: Config = {
     'docusaurus-plugin-sass',
     '@docusaurus/plugin-ideal-image',
     ['docusaurus-plugin-baidu-tongji', { token: 'f91a15bda7ec05a43959e5a4ee64682b' }],
+    ['@docusaurus/plugin-google-tag-manager', {containerId: 'G-9B70TGKMER',},],
     [
       '@docusaurus/plugin-pwa',
       {
