@@ -9,7 +9,7 @@ image: https://winbuzzer.com/wp-content/uploads/2023/02/openai-logo-696x392.png.
 ---
 GPT-4o是OpenAI最新的推出的旗舰模型，它和GPT-4有何区别呢？
 
-`<!-- truncate -->`
+<!-- truncate -->
 
 # 引入GPT-4o：先进的人工智能技术
 
