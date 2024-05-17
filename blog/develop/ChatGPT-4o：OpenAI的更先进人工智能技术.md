@@ -5,10 +5,11 @@ date: 2024-05-15
 authors: mochi
 tags: [随记, AI, ChatGPT]
 keywords: [随记, AI, ChatGPT]
-image: https://th.bing.com/th/id/OIP.Lj3jTynz3xM6db9w9O7kqgHaE8?rs=1&pid=ImgDetMain
+image: https://winbuzzer.com/wp-content/uploads/2023/02/openai-logo-696x392.png.webp
 ---
+GPT-4o是OpenAI最新的推出的旗舰模型，它和GPT-4有何区别呢？
 
-<!-- truncate -->
+`<!-- truncate -->`
 
 # 引入GPT-4o：先进的人工智能技术
 
