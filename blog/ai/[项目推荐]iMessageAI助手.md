@@ -5,7 +5,7 @@ date: 2024-05-19
 authors: mochi
 tags: [软件, AI, ChatGPT]
 keywords: [软件, AI, ChatGPT]
-image: https://winbuzzer.com/wp-content/uploads/2023/02/openai-logo-696x392.png.webp
+image: https://img2.imgtp.com/2024/05/19/GTJ3uSus.jpg
 ---
 
 iMessage AI 助手 - 用苹果设备（ iPhone / iPad /Mac）无痛使用原生 ChatGPT
@@ -17,6 +17,8 @@ iMessage AI 助手 - 用苹果设备（ iPhone / iPad /Mac）无痛使用原生 
 无需下载App，也无需使用VPN，iMessage AI助手让您直接通过苹果设备（iPhone/iPad/Mac）的iMessage与ChatGPT对话聊天。本服务采用原生GPT-3.5和GPT-4模型，对提示词和GPT返回的答案不作任何限制或改动。开通此服务是免费的，并且我们还提供了充足的免费额度供您使用。
 
 您还可以将 <chat@stockai.trade> 存为联系人，然后用Siri给它发信息和阅读回复，这就相当于有了一个随时在线、开车可用的ChatGPT语音助手。
+
+![](https://img2.imgtp.com/2024/05/19/9bXKzVIo.jpg)
 
 ### 特点
 
