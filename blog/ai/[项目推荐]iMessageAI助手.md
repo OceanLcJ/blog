@@ -18,7 +18,7 @@ iMessage AI 助手 - 用苹果设备（ iPhone / iPad /Mac）无痛使用原生 
 
 您还可以将 [chat@stockai.trade](mailto:chat@stockai.trade) 存为联系人，然后用Siri给它发信息和阅读回复，这就相当于有了一个随时在线、开车可用的ChatGPT语音助手。
 
-![](https://img2.imgtp.com/2024/05/19/9bXKzVIo.jpg)
+![效果图片](https://img2.imgtp.com/2024/05/19/h2QJXm8t.jpg)
 
 ### 特点
 
