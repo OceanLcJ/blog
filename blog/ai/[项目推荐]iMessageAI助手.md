@@ -30,7 +30,7 @@ iMessage AI 助手 - 用苹果设备（ iPhone / iPad /Mac）无痛使用原生 
 ### 如何开通服务
 
 1. **确认设置**：请先确认您的iPhone设置。前往“设置”>“信息”，确保iMessage已打开。
-2. **获取验证码**：点击下方按钮获取验证码。
+2. **获取验证码**：进入官方网站[https://stockai.trade/chat](https://stockai.trade/chat)获取验证码。
 3. **发送验证码**：用iMessage将验证码发送至 [chat@stockai.trade](mailto:chat@stockai.trade)。通常2秒内会收到回复。
 4. **验证成功**：如果收到回复，说明服务已正常开通。您可以随时通过iMessage与AI助手对话。
 5. **处理异常情况**：
@@ -41,4 +41,4 @@ iMessage AI 助手 - 用苹果设备（ iPhone / iPad /Mac）无痛使用原生 
 
 ### 官方网站
 
-[https://stockai.trade](https://stockai.trade)
+[https://stockai.trade/chat](https://stockai.trade/chat)
