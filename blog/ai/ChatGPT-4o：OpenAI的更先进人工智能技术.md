@@ -11,7 +11,6 @@ GPT-4o是OpenAI最新的推出的旗舰模型，它和GPT-4有何区别呢？
 
 <!-- truncate -->
 
-
 # 引入GPT-4o：先进的人工智能技术
 
 作为致力于推进人工智能技术并确保其普及和惠及所有人的机构，今天，OpenAI隆重推出了最新的旗舰模型——GPT-4o，并将更多的智能和先进工具免费提供给ChatGPT用户。
@@ -26,7 +25,7 @@ OpenAI的穆里·穆拉蒂表示，OpenAI使命的一个非常重要的部分，
 
 目前，OpenAI正在向ChatGPT Plus和团队用户推出GPT-4o，企业用户的可用性也将很快到来。同时，也开始向ChatGPT免费用户推出GPT-4o，但使用将有一定限制。Plus用户的消息限制是免费用户的5倍，而团队和企业用户的限制更高。
 
-![GPT-4o](https://imagepphcloud.thepaper.cn/pph/image/304/905/299.jpg)
+![GPT-4o](https://img2.imgtp.com/2024/05/23/h9hHzoTh.jpg)
 
 ## 2. 提供更多免费的智能和先进工具
 
