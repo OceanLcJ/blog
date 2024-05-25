@@ -11,7 +11,7 @@ export const projects: Project[] = [
   {
     title: 'Fake Name Generator',
     description: '一款关于生成假名的工具网站',
-    preview: '/img/project/fakenamegenerator.png',
+    preview: '/img/project/fakenamegenerator.jpg',
     website: 'https://fakenamegenerator.online/',
     source: '',
     tags: ['favorite', 'design'],
