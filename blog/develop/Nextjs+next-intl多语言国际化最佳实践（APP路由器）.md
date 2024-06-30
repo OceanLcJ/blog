@@ -50,7 +50,7 @@ next-intl 是一个完整的nextjs的国际化方案，无须其它软件包。�
 
 这是个配置文件，这个文件中配置的项目会在其它一些文件中调用。
 
-```js
+```txt
 import { createSharedPathnamesNavigation } from 'next-intl/navigation';
 
 export const locales = ['en', 'de', 'es', 'ja','ko','it','pt'];
@@ -99,7 +99,7 @@ app目录中的页面文件全部放到[locale]目录中。
 
 #### 代码
 
-```js
+```txt
 import createMiddleware from "next-intl/middleware";
 import { defaultLocale, localePrefix, locales } from '@/navigation';
 export default createMiddleware({
@@ -152,7 +152,7 @@ export default createMiddleware({
 
 路径中的${locale}表示语言。
 
-```js
+```txt
 import { getRequestConfig } from "next-intl/server";
 
 // Create this configuration once per request and 
@@ -165,7 +165,7 @@ export default getRequestConfig(async ({ locale }) => ({
 
 ### 3、next.config.js的配置
 
-```js
+```txt
 /** @type {import('next').NextConfig} */
 const nextConfig = {}
 const withNextIntl = require("next-intl/plugin")("./i18n.js");
@@ -177,7 +177,7 @@ module.exports =withNextIntl( nextConfig)
 
 #### layout.js中的代码
 
-```js
+```txt
 import "./globals.css";
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 import { locales } from '@/navigation';
@@ -209,7 +209,7 @@ export default function RootLayout({
 
 如果翻译文件是嵌套的方式，则根据文件结构和实际需要，用类似：const t = useTranslations(“bbb“);
 
-```js
+```txt
 import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 export default function Home({ params: { locale } }) {
@@ -222,7 +222,7 @@ export default function Home({ params: { locale } }) {
 
 ## 六、语言切换器
 
-```js
+```txt
 "use client";
 import { useLocale } from "next-intl";
 import { localeItems, useRouter, usePathname, defaultLocale } from '@/navigation';
@@ -287,7 +287,8 @@ nextjs的APP路由器，生成页面的title和Meta data，我尝试了三种方
 
 所以，page.js的代码改成了这样：
 
-```js
+```txt
+
 import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 export default function Home({ params: { locale } }) {
@@ -308,6 +309,7 @@ export default function Home({ params: { locale } }) {
  
 <Link href={"/"}><h1>{t("aaa")}</h1></Link>
 </>)
+
 ```
 
 #### 2、多语言导航：让搜索引擎更容易发现多语言URL
@@ -315,7 +317,7 @@ export default function Home({ params: { locale } }) {
 语言切换器是前端渲染的，所以，我在页面的底部，也就是组件Footer.js中增加了后端渲染的多语言导航。点击相应的语言就会进入此语言的网站首页。
 Footer.js代码如下：
 
-```js
+```txt
 import Link from 'next/link'
 import { localeItems,defaultLocale } from '@/navigation';
 
