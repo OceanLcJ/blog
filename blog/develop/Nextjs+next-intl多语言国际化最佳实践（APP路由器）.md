@@ -119,6 +119,61 @@ export default createMiddleware({
   };
 ```
 
+## 四、加载翻译文件
+
+### 1、翻译文件
+
+说明
+我的翻译文件放在了“public”目录中，但，其实，翻译文件也可以放在其它目录中，只要在i18n.js文件中配置好想应的路径即可。
+
+翻译文件是一个json文件，json文件可以是嵌套格式，也可以不嵌套。这两种，最终，在引用时会稍有不同。
+
+（不嵌套）
+
+```txt
+{
+  "aaa": "hi",
+}
+```
+
+（嵌套）
+
+```txt
+{
+  "bbb":{
+        "aaa":"hi",
+        } 
+}
+```
+
+### 2、i18n.js文件
+
+说明：
+这个文件，是导入翻译文件的，关键是配置翻译文件的路径，要和你的翻译文件所在的路径保持一致。
+
+路径中的${locale}表示语言。
+
+```txt
+import { getRequestConfig } from "next-intl/server";
+
+// Create this configuration once per request and 
+// make it available to all Server Components.
+export default getRequestConfig(async ({ locale }) => ({
+  // Load translations for the active locale.
+  messages: (await import(`./public/locales/${locale}/common.json`)).default,
+}));
+```
+
+### 3、next.config.js的配置
+
+```txt
+/** @type {import('next').NextConfig} */
+const nextConfig = {}
+const withNextIntl = require("next-intl/plugin")("./i18n.js");
+
+module.exports =withNextIntl( nextConfig)
+```
+
 
 
 ## 八、总结
