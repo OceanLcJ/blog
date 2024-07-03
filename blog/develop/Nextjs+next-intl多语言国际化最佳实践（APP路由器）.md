@@ -45,3 +45,88 @@ next-intl 是一个完整的nextjs的国际化方案，无须其它软件包。�
 |next.config.js
 ```
 
+## 三、国际化路由
+
+### 1、novigation.js
+
+这是个配置文件，这个文件中配置的项目会在其它一些文件中调用。
+
+```txt
+import { createSharedPathnamesNavigation } from 'next-intl/navigation';
+
+export const locales = ['en', 'de', 'es', 'ja','ko','it','pt'];
+export const localePrefix = 'as-needed';
+export const defaultLocale= "en";
+export const localeItems= [
+  { name: "English",code: "en", iso: "en-US", dir: "ltr" },
+  { name: "español",code: "es", iso: "es-ES", dir: "ltr" },
+  { name: "中文",code: "zh_cn", iso: "zh-CN", dir: "ltr" },
+  { name: "Deutsch",code: "de", iso: "de-DE", dir: "ltr" },
+  { name: "Italiano",code: "it", iso: "it-IT", dir: "ltr" },
+  { name: "日本語",code: "ja", iso: "ja-JP", dir: "ltr" },
+  { name: "한국인",code: "ko", iso: "ko-KR", dir: "ltr" },
+  { name: "Português",code: "pt", iso: "pt-PT", dir: "ltr" },
+]
+
+export const { Link, redirect, usePathname, useRouter } =
+  createSharedPathnamesNavigation({ locales, localePrefix });
+```
+
+### 2、[locale]目录
+
+app目录中的页面文件全部放到[locale]目录中。
+
+### 3、中间件：middleware.js
+
+#### 说明
+
+实现以下样式的URL
+
+默认语言的URL：
+
+首页为：www.xxx.com
+
+内页为：www.xxx.com/about
+
+其它语言的URL：（以西班牙语为例）
+
+首页为：www.xxx.com/es
+
+内页为：www.xxx.com/es/about
+
+另外，如果URL中输入了默认语言，比如默认语言为英语，用户输入URL：www.xxx.com/en
+
+那么，将自动转到www.xxx.com
+
+#### 代码
+
+```txt
+import createMiddleware from "next-intl/middleware";
+import { defaultLocale, localePrefix, locales } from '@/navigation';
+export default createMiddleware({
+    locales,
+    localePrefix ,
+    defaultLocale,
+    localeDetection: false,
+    
+  });
+  
+  export const config = {
+    // Skip all paths that should not be internationalized.
+    // This skips the folders "api", "_next" and all files
+    // with an extension (e.g. favicon.ico)
+    matcher: ["/((?!api|_next|.*\\..*).*)"],
+  };
+```
+
+
+
+## 八、总结
+
+国际化路由、翻译文件的结构和引入、翻译的实现。无论哪种国际化方案，都会涉及到这三个方面。虽然都不叫麻烦，但总的来说，next-intl相对还是简单一些。
+
+## 九、参考
+
+[A Deep Dive into Next.js App Router Localization with next-intl](https://phrase.com/blog/posts/next-js-app-router-localization-next-intl/)
+
+[A complete guide for setting up next-intl with the App Router](https://i18nexus.com/tutorials/nextjs/next-intl)
