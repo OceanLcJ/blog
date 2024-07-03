@@ -151,9 +151,9 @@ export default createMiddleware({
 说明：
 这个文件，是导入翻译文件的，关键是配置翻译文件的路径，要和你的翻译文件所在的路径保持一致。
 
-路径中的${locale}表示语言。
+路径中的`${locale}`表示语言。
 
-```txt
+```js
 import { getRequestConfig } from "next-intl/server";
 
 // Create this configuration once per request and 
