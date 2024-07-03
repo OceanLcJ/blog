@@ -24,3 +24,24 @@ next-intl 是一个完整的nextjs的国际化方案，无须其它软件包。�
 
 所以，就是它了。
 
+## 二、目录结构
+
+```txt
+|app
+..[locale]
+...layout.js
+...page.js
+|components
+..LangSwitcher.js
+|public
+..locales
+...en
+....common.json
+...es
+....common.json
+|i18n.js
+|navigation.js
+|middleware.js
+|next.config.js
+```
+
