@@ -164,6 +164,190 @@ export default getRequestConfig(async ({ locale }) => ({
 }));
 ```
 
+## 五、实现翻译
+
+#### layout.js中的代码
+
+```js
+import "./globals.css";
+import { NextIntlClientProvider, useMessages } from 'next-intl';
+import { locales } from '@/navigation';
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+export default function RootLayout({
+  children, params: { locale }
+}) {
+  if (!locales.includes(locale)) {
+    notFound();
+  } 
+       const messages = useMessages();
+
+  return (
+    <html lang={locale}>
+      <NextIntlClientProvider locale={locale} messages={messages}>
+      <body><Header />{children}<Footer /></body>
+      </NextIntlClientProvider>
+    </html>
+  );
+}
+```
+
+#### page.js中的代码
+
+参数locale表示当前的语言。
+
+如果翻译文件是不嵌套的方式，则const t = useTranslations();
+
+如果翻译文件是嵌套的方式，则根据文件结构和实际需要，用类似：const t = useTranslations(“bbb“);
+
+```js
+import { useTranslations } from 'next-intl';
+import { Link } from '@/navigation';
+export default function Home({ params: { locale } }) {
+  const t = useTranslations();
+
+  return (<>   
+<Link href={"/"}><h1>{t("aaa")}</h1></Link>
+</>)
+```
+
+### 3、next.config.js的配置
+
+```js
+/** @type {import('next').NextConfig} */
+const nextConfig = {}
+const withNextIntl = require("next-intl/plugin")("./i18n.js");
+
+module.exports =withNextIntl( nextConfig)
+```
+
+## 六、语言切换器
+
+```js
+"use client";
+import { useLocale } from "next-intl";
+import { localeItems, useRouter, usePathname, defaultLocale } from '@/navigation';
+export default function LangSwitcher() {
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+  console.log(locale)
+
+  const handleChange = (e) => {
+    router.push(pathname, { locale: e.target.value });
+  };
+ 
+  return (
+    <div>
+      <select
+      value={locale}
+        onChange={handleChange}
+        className="h-8 m-2 p-1 rounded border-current"
+      >
+        <option value={locale} > {GetLangData(locale).name}</option>
+
+        {localeItems.map((item) => {
+
+          if (item.code === locale) return null
+          return (<option key={item.code} value={item.code}>
+            {item.name}
+          </option>)
+        })}
+      </select>
+    </div>
+  );
+}
+export function GetLangData(defaultLocale) {
+  var res = {}
+  {
+    localeItems.map(locale => {
+      if (locale.code === defaultLocale) {
+        console.log(locale)
+        res = locale
+      }
+    })
+  }
+  return res
+
+}
+```
+
+## 七、SEO和搜索引擎友好
+
+#### 1、Meta data
+
+nextjs的APP路由器，生成页面的title和Meta data，我尝试了三种方式：
+
+##### 第一种方式：在layout.js中直接使用：expert const metadata={}
+
+##### 第二种方式：在page.js中使用动态生成Meta data
+
+可参考：[Optimizing: Metadata | Next.js (nextjs.org)](https://nextjs.org/docs/app/building-your-application/optimizing/metadata)
+
+##### 第三种方式：直接在page.js中写title标签和Meta标签
+
+所以，page.js的代码改成了这样：
+
+```js
+
+import { useTranslations } from 'next-intl';
+import { Link } from '@/navigation';
+export default function Home({ params: { locale } }) {
+  const t = useTranslations();
+
+  return (<>  
+          <title>{t("site-name")}</title>
+        <meta name="keyword" content={t("site-name")}></meta>
+        <meta name="description" content={t("site-description")}></meta>
+        <meta property="og:type" content="website"></meta>
+        <meta property="og:title" content={t("site-name")}></meta>
+        <meta property="og:description" content={t("site-description")}></meta>
+        <meta property="og:site_name" content={t("site-name")}></meta>
+        <meta property="og:image" content="/images/xxx.png"></meta>
+        <meta property="og:image:width" content="512"></meta>
+        <meta property="og:image:height" content="512"></meta>
+        <meta property="og:image:alt" content=""></meta>
+ 
+<Link href={"/"}><h1>{t("aaa")}</h1></Link>
+</>)
+
+```
+
+#### 2、多语言导航：让搜索引擎更容易发现多语言URL
+
+语言切换器是前端渲染的，所以，我在页面的底部，也就是组件Footer.js中增加了后端渲染的多语言导航。点击相应的语言就会进入此语言的网站首页。
+Footer.js代码如下：
+
+```js
+import Link from 'next/link'
+import { localeItems,defaultLocale } from '@/navigation';
+
+
+export default function Footer(){
+
+
+  return (<>
+    <div className="divider"></div>
+    <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
+      <nav className="flex flex-wrap gap-4">
+
+     {localeItems.map(locale => {
+          if (locale.code === defaultLocale) return(<Link className="link link-hover" href="/"  key={locale.code}>{locale.name}</Link>)
+          const thehref="/"+locale.code
+          return (<Link className="link link-hover" href={thehref} key={locale.code}> {locale.name}</Link>)
+        })} 
+  </nav> 
+      <aside className='p-6 text-center'>
+        <p>Copyright © 2024 - All right reserved by xxx.com</p>
+      </aside>
+     
+    </footer>
+  </>
+    
+  )
+}
+```
+
 ## 八、总结
 
 国际化路由、翻译文件的结构和引入、翻译的实现。无论哪种国际化方案，都会涉及到这三个方面。虽然都不叫麻烦，但总的来说，next-intl相对还是简单一些。
