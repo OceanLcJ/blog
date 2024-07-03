@@ -146,6 +146,24 @@ export default createMiddleware({
 }
 ```
 
+### 2、i18n.js文件
+
+说明：
+这个文件，是导入翻译文件的，关键是配置翻译文件的路径，要和你的翻译文件所在的路径保持一致。
+
+路径中的${locale}表示语言。
+
+```txt
+import { getRequestConfig } from "next-intl/server";
+
+// Create this configuration once per request and 
+// make it available to all Server Components.
+export default getRequestConfig(async ({ locale }) => ({
+  // Load translations for the active locale.
+  messages: (await import(`./public/locales/${locale}/common.json`)).default,
+}));
+```
+
 ## 八、总结
 
 国际化路由、翻译文件的结构和引入、翻译的实现。无论哪种国际化方案，都会涉及到这三个方面。虽然都不叫麻烦，但总的来说，next-intl相对还是简单一些。
