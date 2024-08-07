@@ -119,9 +119,9 @@ const config: Config = {
       ],
       copyright: `
         <p style="margin-bottom: 0;"><a href="http://beian.miit.gov.cn/">${beian}</a></p>
-        <p style="display: inline-flex; align-items: center;"><img style="height:20px;margin-right: 0.5rem;" src="/img/police.png" alt="police" height="20"/><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=${beian1.match(
-          /\d+/,
-        )?.[0]}" >${beian1}</a></p>
+        <p style="display: inline-flex; align-items: center;"><img style="height:20px;margin-right: 0.5rem;" src="/img/police.png" alt="police" height="20"/><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=${
+          beian1.match(/\d+/)?.[0]
+        }" >${beian1}</a></p>
         <p>Copyright © 2020 - PRESENT mochi Built with Docusaurus.</p>
         `,
     },
@@ -209,7 +209,7 @@ const config: Config = {
     'docusaurus-plugin-sass',
     '@docusaurus/plugin-ideal-image',
     ['docusaurus-plugin-baidu-tongji', { token: 'f91a15bda7ec05a43959e5a4ee64682b' }],
-    ['@docusaurus/plugin-google-tag-manager', {containerId: 'G-9B70TGKMER',},],
+    ['@docusaurus/plugin-google-tag-manager', { containerId: 'G-9B70TGKMER' }],
     [
       '@docusaurus/plugin-pwa',
       {
@@ -252,6 +252,14 @@ const config: Config = {
         content: 'mochi的个人博客',
       },
     },
+    // 添加Monetag的<meta>标签
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'monetag',
+        content: '5558af5874e960a14c7cbef1a6819114',
+      },
+    },
   ],
   stylesheets: [
     'https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Normal.min.css',
@@ -267,10 +275,10 @@ const config: Config = {
     },
   },
   scripts: [
-    {   
-    src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4753725476914524',
-    crossorigin: 'anonymous'
-    }
+    {
+      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4753725476914524',
+      crossorigin: 'anonymous',
+    },
   ],
 }
 
