@@ -279,6 +279,12 @@ const config: Config = {
       src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4753725476914524',
       crossorigin: 'anonymous',
     },
+    {
+      src: 'https://alwingulla.com/88/tag.min.js',
+      'data-zone': '86339',
+      async: true,
+      'data-cfasync': 'false'
+    },
   ],
 }
 
