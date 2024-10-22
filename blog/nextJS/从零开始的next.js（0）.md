@@ -5,7 +5,7 @@ date: 2024-10-22
 authors: [mochi]
 tags: [nextjs, tutorial, beginners]
 keywords: [nextjs, 初学者教程, 从零开始]
-image: ./images/nextjs.png
+image: 
 ---
 # 从零开始的 Next.js（0）
 
