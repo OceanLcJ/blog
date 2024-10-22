@@ -5,7 +5,7 @@ date: 2024-10-22
 authors: [mochi]
 tags: [nextjs, tutorial, beginners]
 keywords: [nextjs, 初学者教程, 从零开始]
-image: 
+image: https://ipfs.crossbell.io/ipfs/QmdBvzpknkWRXzc7fmDsXY4TCqAeSHtuG7yV4fVJR9hoxt?img-quality=75&img-format=auto&img-onerror=redirect&img-width=1920
 ---
 # 从零开始的 Next.js（0）
 
