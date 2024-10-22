@@ -107,19 +107,21 @@ export type Invoice = {
 
 通过使用 TypeScript，您可以确保不会意外地将错误的数据格式传递给组件或数据库，例如将**String类型**而不是**number类型**传递给发票金额。
 
-
 如果你是 TypeScript 开发人员：
-- 我们手动声明数据类型，但为了更好的类型安全性，我们建议使用 [Prisma](https://www.prisma.io/) 或 [Drizzle](https://orm.drizzle.team/)，它们会根据您的数据库架构自动生成类型。 
+
+- 我们手动声明数据类型，但为了更好的类型安全性，我们建议使用 [Prisma](https://www.prisma.io/) 或 [Drizzle](https://orm.drizzle.team/)，它们会根据您的数据库架构自动生成类型。
 - Next.js 会检测您的项目是否使用 TypeScript 并自动安装必要的包和配置。Next.js 还为您的代码编辑器提供了一个 [TypeScript 插件](https://nextjs.org/docs/app/building-your-application/configuring/typescript#typescript-plugin)，以帮助实现自动完成和类型安全。
 
 ## 运行代码
 
 运行pnpm i 以安装项目的包。
+
 ```bash
 pnpm i
 ```
 
 然后是pnpm dev来启动开发服务器
+
 ```bash
 pnpm dev
 ```
