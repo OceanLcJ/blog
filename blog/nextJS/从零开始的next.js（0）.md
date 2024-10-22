@@ -5,6 +5,7 @@ date: 2024-10-22
 authors: [mochi]
 tags: [nextjs, tutorial, beginners]
 keywords: [nextjs, 初学者教程, 从零开始]
+image: ./images/nextjs.png
 ---
 # 从零开始的 Next.js（0）
 
@@ -16,6 +17,7 @@ keywords: [nextjs, 初学者教程, 从零开始]
 
 ![构建内容](./images/nextjs-0-1.png)
     在本教程中，我们将构建一个简化版的财务仪表盘，该仪表盘具备：
+
 - 登录功能
 - 主页
 - 受身份验证保护的仪表盘页面
@@ -27,6 +29,7 @@ keywords: [nextjs, 初学者教程, 从零开始]
 ## 概述
 
  以下是您将在本课程中学习的功能概述：
+
 - Styling: 在Next.js中设置应用程序样式的不同方法。
 - Optimization（优化）: 如何优化图像、链接和字体。
 - Routing（路由）: 如何使用文件系统路由创建嵌套布局和页面。
@@ -45,11 +48,13 @@ keywords: [nextjs, 初学者教程, 从零开始]
 ## 系统要求
 
 在开始本课程之前，请确保你的系统满足以下要求：
+
 - Node.js已经安装18.18.0或更高版本。在[此处下载](https://nodejs.org/zh-cn)
 - 操作系统：macOS 10.12+, Windows 7+, or Linux（Ubuntu, Fedora, CentOS, etc.）
 
 此外，您还需要一个[github账号](https://github.com/)和一个[Vercel账号](https://vercel.com/)
 
 ## 参考资料
+
 - [Next.js](https://nextjs.org/)
 - [Learn Next.js](https://nextjs.org/learn/dashboard-app)
