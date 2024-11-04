@@ -7,6 +7,7 @@ tags: [nextjs, tutorial, beginners]
 keywords: [nextjs, 初学者教程, 从零开始]
 image: https://tse1-mm.cn.bing.net/th/id/OIP-C.r8ES03eRUKPslUJBwnsqCgHaDN?rs=1&pid=ImgDetMain
 ---
+
 # 从零开始的 Next.js（2）
 
 本文为从零开始的 Next.js 教程的第一章，主要介绍我们如何给项目添加CSS样式。
@@ -72,7 +73,7 @@ export default function RootLayout({
 
 如果你查看 /app/page.tsx，你会发现我们在示例中使用了 Tailwind 类。
 
-```tsx title="/app/page.tsx"
+```TSX title="/app/page.tsx"
 
 import AcmeLogo from '@/app/ui/acme-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
