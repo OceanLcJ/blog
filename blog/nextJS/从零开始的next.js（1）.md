@@ -128,3 +128,9 @@ pnpm dev
 
 pnpm dev 在端口 3000 上启动 Next.js 开发服务器。让我们检查一下它是否有效。在浏览器上打开 [http://localhost:3000](http://localhost:3000)。您的主页应如下所示，这是有意取消样式的：
 ![](./images/nextjs-1-2.png)
+
+
+## 参考资料
+
+- [Next.js](https://nextjs.org/)
+- [Learn Next.js](https://nextjs.org/learn/dashboard-app)
