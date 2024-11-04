@@ -1,7 +1,7 @@
 ---
 slug: getting-started-with-nextjs-2
 title: 从零开始的 Next.js（2）
-date: 2024-10-22
+date: 2024-11-4
 authors: [mochi]
 tags: [nextjs, tutorial, beginners]
 keywords: [nextjs, 初学者教程, 从零开始]
