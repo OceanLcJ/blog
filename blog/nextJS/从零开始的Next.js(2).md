@@ -61,7 +61,7 @@ export default function RootLayout({
 
 [Tailwind](https://tailwindcss.com/) 是一个 CSS 框架，它提供了一组 CSS 样式，您可以在您的应用程序中使用。它允许您直接在TSX标记中快速编写[实用程序类](https://tailwindcss.com/docs/utility-first)，从而加快开发过程。
 
-在Tailwind中，您可以通过类名称来添加样式，而无需编写任何CSS。例如，添加类 “text-blue-500” 会将 <h1> 文本变为蓝色：
+在Tailwind中，您可以通过类名称来添加样式，而无需编写任何CSS。例如，添加类 “text-blue-500” 会将 `<h1>` 文本变为蓝色：
 
 ```TSX
 <h1 className="text-blue-500">Hello world!</h1>
