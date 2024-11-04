@@ -92,7 +92,7 @@ export default function Page() {
 
 如果这是您第一次使用 Tailwind，请不要担心。为了节省时间，我们已经为您将使用的所有组件设置了样式。
 
-让我们玩 Tailwind！复制下面的代码并将其粘贴到 /app/page.tsx 中 <p> 元素的上方：
+让我们玩 Tailwind！复制下面的代码并将其粘贴到 /app/page.tsx 中 `<p>` 元素的上方：
 
 ```tsx title="/app/page.tsx"
 
@@ -124,7 +124,7 @@ export default function Page() {
 
 ```
 
-然后，在您的 /app/page.tsx 文件中，导入样式并将您添加的 <div> 中的 Tailwind 类名替换为 styles.shape：
+然后，在您的 /app/page.tsx 文件中，导入样式并将您添加的 `<div>` 中的 Tailwind 类名替换为 styles.shape：
 
 ```tsx title="/app/page.tsx"
 
