@@ -13,6 +13,7 @@ mochi的个人博客
 <a href="https://vercel.com/new/clone?repository-url=https://github.com/kuizuo/blog/tree/main&project-name=blog&repo-name=blog" rel="nofollow"><img src="https://vercel.com/button"></a>
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/kuizuo/blog" rel="nofollow"><img src="https://www.netlify.com/img/deploy/button.svg"></a>
 <a href="https://stackblitz.com/github/kuizuo/blog" rel="nofollow"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg"></a>
+<a href="https://app.codeanywhere.com/#https://github.com/OceanLcJ/blog/blob/7b5300cd89f6a567c98a791ca930a1ad75516f42/README.md" rel="nofollow"><img src="https://codeanywhere.com/img/open-in-codeanywhere-btn.svg"></a>
 </p>
 
 ## 👋 Introduction
