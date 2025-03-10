@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { translate } from '@docusaurus/Translate'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import ShowcaseCard from './_components/ShowcaseCard'
-import { projects, groupByProjects, projectTypeMap } from '@site/data/projects'
+import { projects, groupByProjects, projectTypeMap } from '@site/src/data/projects'
 
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment'
 

@@ -9,20 +9,20 @@ export const projects: Project[] = [
     type: 'web',
   },
   {
+    title: 'PDF Word Counter',
+    description: '一款在线PDF文档字数统计工具，支持多语言，快速准确',
+    preview: '/img/project/pdf-word.png',
+    website: 'https://www.wordcountpdf.online',
+    tags: [ 'tool', 'product', 'pdf'],
+    type: 'web',
+  },
+  {
     title: 'Fake Name Generator',
     description: '一款关于生成假名的工具网站',
     preview: '/img/project/fakenamegenerator.jpg',
     website: 'https://fakenamegenerator.online/',
     source: '',
     tags: ['favorite', 'design'],
-    type: 'web',
-  },
-  {
-    title: 'PDF Word Counter',
-    description: '一款在线PDF文档字数统计工具，支持多语言，快速准确',
-    preview: '/img/project/pdf-word.jpg',
-    website: 'https://www.wordcountpdf.online',
-    tags: [ 'tool', 'product', 'pdf'],
     type: 'web',
   },
   // {
