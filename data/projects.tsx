@@ -17,15 +17,14 @@ export const projects: Project[] = [
     tags: ['favorite', 'design'],
     type: 'web',
   },
-  // {
-  //   title: 'nest-vben-admin',
-  //   description: ' NestJs + Vben Admin 编写的一款前后端分离的权限管理系统',
-  //   preview: '/img/project/nest-vben-admin.png',
-  //   website: 'https://admin.kuizuo.cn',
-  //   source: 'https://github.com/kuizuo/nest-vben-admin',
-  //   tags: ['opensource', 'favorite', 'product', 'large'],
-  //   type: 'web',
-  // },
+  {
+    title: 'PDF Word Counter',
+    description: '一款在线PDF文档字数统计工具，支持多语言，快速准确',
+    preview: '/img/project/pdf-word.jpg',
+    website: 'https://www.wordcountpdf.online',
+    tags: [ 'tool', 'product', 'pdf'],
+    type: 'web',
+  },
   // {
   //   title: 'api-server',
   //   description: '🔗 基于 Nuxt 搭建的 API 接口服务网站',
